@@ -14,7 +14,180 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_users: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          is_active: boolean | null
+          last_login: string | null
+          password_hash: string
+          role: string | null
+          updated_at: string
+          username: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          is_active?: boolean | null
+          last_login?: string | null
+          password_hash: string
+          role?: string | null
+          updated_at?: string
+          username: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          is_active?: boolean | null
+          last_login?: string | null
+          password_hash?: string
+          role?: string | null
+          updated_at?: string
+          username?: string
+        }
+        Relationships: []
+      }
+      clinic_partnerships: {
+        Row: {
+          additional_info: string | null
+          city: string | null
+          clinic_name: string
+          contact_person: string | null
+          country: string | null
+          created_at: string
+          email: string
+          id: string
+          phone: string | null
+          status: string | null
+          updated_at: string
+        }
+        Insert: {
+          additional_info?: string | null
+          city?: string | null
+          clinic_name: string
+          contact_person?: string | null
+          country?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          phone?: string | null
+          status?: string | null
+          updated_at?: string
+        }
+        Update: {
+          additional_info?: string | null
+          city?: string | null
+          clinic_name?: string
+          contact_person?: string | null
+          country?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          phone?: string | null
+          status?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      demo_submissions: {
+        Row: {
+          assigned_oncologist: string | null
+          contact_email: string
+          contact_phone: string | null
+          created_at: string
+          file_urls: string[] | null
+          id: string
+          lab_results: string | null
+          language: string | null
+          medical_history: string | null
+          oncologist_report: string | null
+          patient_age: number | null
+          patient_name: string
+          status: string | null
+          structured_report: Json | null
+          translated_report: string | null
+          updated_at: string
+        }
+        Insert: {
+          assigned_oncologist?: string | null
+          contact_email: string
+          contact_phone?: string | null
+          created_at?: string
+          file_urls?: string[] | null
+          id?: string
+          lab_results?: string | null
+          language?: string | null
+          medical_history?: string | null
+          oncologist_report?: string | null
+          patient_age?: number | null
+          patient_name: string
+          status?: string | null
+          structured_report?: Json | null
+          translated_report?: string | null
+          updated_at?: string
+        }
+        Update: {
+          assigned_oncologist?: string | null
+          contact_email?: string
+          contact_phone?: string | null
+          created_at?: string
+          file_urls?: string[] | null
+          id?: string
+          lab_results?: string | null
+          language?: string | null
+          medical_history?: string | null
+          oncologist_report?: string | null
+          patient_age?: number | null
+          patient_name?: string
+          status?: string | null
+          structured_report?: Json | null
+          translated_report?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      us_oncologists: {
+        Row: {
+          created_at: string
+          email: string
+          hospital_affiliation: string | null
+          id: string
+          is_active: boolean | null
+          license_number: string | null
+          name: string
+          phone: string | null
+          specialty: string | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          hospital_affiliation?: string | null
+          id?: string
+          is_active?: boolean | null
+          license_number?: string | null
+          name: string
+          phone?: string | null
+          specialty?: string | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          hospital_affiliation?: string | null
+          id?: string
+          is_active?: boolean | null
+          license_number?: string | null
+          name?: string
+          phone?: string | null
+          specialty?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
