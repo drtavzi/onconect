@@ -27,7 +27,7 @@ export function HeroSection() {
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 shadow-medium">
                 {t('getStarted')}
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="text-primary border-white hover:bg-white/10">
                 {t('watchDemo')}
               </Button>
             </div>
